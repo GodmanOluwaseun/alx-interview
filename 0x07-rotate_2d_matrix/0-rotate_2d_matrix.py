@@ -3,9 +3,10 @@
 Given an n x n 2D matrix, rotate it 90 degrees clockwise.
 """
 
+
 def rotate_2d_matrix(matrix):
     """Rotates 2d matrix 90 degrees clockwise"""
-    n =  len(matrix)
+    n = len(matrix)
 
     matrix.reverse()
 
