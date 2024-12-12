@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-"""0-prime_game
-Dtermnines winner of game across x rounds, when no prime is left.
+
+"""0-prime_game.
+
+Dtermnine winner of game across x rounds, when no prime is left.
 """
 
+
 def isWinner(x, nums):
-    """Determines winner of game
+    """Determine winner of game.
 
     Args:
         x (int): No of rounds.
@@ -13,14 +16,13 @@ def isWinner(x, nums):
     Returns:
         str: Winner of game.
     """
-
     if not nums or x < 1:
         return None
 
     maxn = max(nums)
 
     def prime_filter(maxn):
-        """Filters list for primes"""
+        """Filter list for primes."""
         prime = [True] * (maxn + 1)
         prime[0] = prime[1] = False
         p = 2
@@ -36,7 +38,7 @@ def isWinner(x, nums):
     prime_count = [0] * (maxn + 1)
     for i in range(maxn + 1):
         prime_count[i] = prime_count[i - 1] + (1 if i in primes else 0)
-    
+
     maria_win, ben_win = 0, 0
 
     for n in nums:
