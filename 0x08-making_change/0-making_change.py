@@ -7,6 +7,7 @@ args:
     total [int]: Total number needed
 """
 
+
 def makeChange(coins, total):
     """Check no of coins required to make total"""
     if total <= 0:
